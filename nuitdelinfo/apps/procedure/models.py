@@ -13,5 +13,6 @@ class ProcedureDocuments(models.Model):
 class Procedure(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=64)
+    link = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     category = models.ForeignKey(ProcedureCategory,on_delete=models.DO_NOTHING) 

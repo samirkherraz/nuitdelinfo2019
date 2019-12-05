@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "compressor",
     'nuitdelinfo',
-    'nuitdelinfo.apps.rest',
     'nuitdelinfo.apps.filedrop',
     'nuitdelinfo.apps.procedure',
 
