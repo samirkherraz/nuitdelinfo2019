@@ -1,9 +1,21 @@
 # nuitdelinfo2019
 
-make run => lancer Django
-npm run serve => Lancer VueJS
+## Installation des dépendances
 
-sudo make install => Installe tout
+`
+sudo make install
 sudo apt install npm 
 npm i 
 make update
+`
+
+## Déploiement de l'application
+
+### Lancer le servuer Django
+
+`make run`
+
+### Lancer le serveur Node.js
+
+`npm run serve`
+
