@@ -4,11 +4,18 @@ import NotFound from "@/pages/NotFound.vue";
 import Marketplace from "@/pages/Marketplace.vue";
 import Detail from "@/pages/Detail.vue";
 import Cart from "@/pages/Cart.vue";
+import Documents from "@/pages/Documents.vue";
+
 const routes = [
   {
     path: "/",
     component: Core,
     children: [
+      {
+        path: "documents",
+        name: "documents",
+        component: Documents
+      },
       {
         path: "marketplace",
         name: "marketplace",
