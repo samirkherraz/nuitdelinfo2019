@@ -5,6 +5,7 @@
         <sidebar-link to="/marketplace" name="Acheter" icon="ti-shopping-cart"/>
         <sidebar-link to="/asset" name="Mes actifs" icon="ti-package"/>
         <sidebar-link to="/invoice" name="Mes factures" icon="ti-credit-card"/>
+        <sidebar-link to="/documents" name="Mes factures" icon=""/> <!-- TODO Add logo-->
         
         <sidebar-link to="/ticket" name="Mes tickets" icon="ti-shopping-cart "/>
         <sidebar-link to="/event" name="Mes evenements" icon="ti-shopping-cart "/>
