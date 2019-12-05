@@ -10,9 +10,8 @@
 
 <script>
     export default {
-        data() {
-            return {
-            };
+        props : {
+            image : image
         }
     }
 </script>
