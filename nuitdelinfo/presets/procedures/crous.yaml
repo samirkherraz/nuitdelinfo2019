@@ -37,7 +37,9 @@ offers:
       - distance_domicile_etablissement
 
   output:
-    - echelon_bourse_crous
-    - montant_annuel_bourse_crous
+    - name: echelon
+      type: text
+    - name: montant_annuel
+      type: number
 
   #link: http://www.crous-lyon.fr/bourses/constituer-son-dossier/pieces-justificatives/

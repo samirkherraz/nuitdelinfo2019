@@ -60,13 +60,6 @@ infos:
   - name: distance_domicile_etablissement
     type: number
 
-  - name: echelon_bourse_crous
-    type: text
-
-  - name: montant_annuel_bourse_crous
-    type: number
-
-
 files:
   - name: id
     suffix: pdf
