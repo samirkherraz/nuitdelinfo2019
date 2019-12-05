@@ -6,5 +6,6 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/filedrop/', include('nuitdelinfo.apps.filedrop.urls')),
+    path('api/procedure/', include('nuitdelinfo.apps.procedure.urls')),
     path('', include('nuitdelinfo.apps.webui.urls')),
 ]

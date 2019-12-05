@@ -1,14 +1,13 @@
 
 from django.http import JsonResponse
-from django.core.serializers.json import DjangoJSONEncoder
+from django.http import QueryDict
 
 class Backend:
     __DEPS__ = []
 
-    def __init__(self, request=None, ctx=None):
+    def __init__(self, request=None, **kwargs):
         self.request = request
-        self.CTX = ctx
-
+        self.kwargs = kwargs
     def get(self):
         pass
 
@@ -24,23 +23,32 @@ class Backend:
     def load(self):
         pass
 
-    def __call__(self, request):
+    def __call__(self, request, **kwargs):
         inst = self.__new__(self.__class__)
-        inst.__init__(request)
+        inst.__init__(request, **kwargs)
         data = None
-        if request.method == 'GET':
-            data = inst.get()
-        if request.method == 'POST':
-            data = inst.post()
-        if request.method == 'DELETE':
-            data = inst.delete()
-        if request.method == 'PUT':
-            data = inst.put()
+        try:
+            if request.method == 'GET':
+                data = inst.get()
+            if request.method == 'POST':
+                data = inst.post()
+            if request.method == 'DELETE':
+                data = inst.delete()
+            if request.method == 'PUT':
+                data = inst.put()
+        except ValueError as e: 
+            return JsonResponse({
+                "status": 1,
+                "content": str(e)
+            })
+
         if data is not None:
             return JsonResponse({
+                "status": 0,
                 "content": data
             })
         else:
             return JsonResponse({
+                "status": 0,
                 "content": True
             })

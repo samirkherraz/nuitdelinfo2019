@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.db import models
 
-class DocumentCategory(models.Model):
+class Category(models.Model):
     id = models.IntegerField(primary_key=True)
     name =  models.CharField(max_length=64)
 
@@ -9,6 +9,10 @@ class DocumentCategory(models.Model):
 class Document(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=64)
-    file = models.FileField()
-    category = models.ForeignKey(DocumentCategory,on_delete=models.DO_NOTHING) 
+    #category = models.ForeignKey(Category,on_delete=models.DO_NOTHING) 
+
+    def save_file(self, f):
+        with open(f'{settings.BASE_DIR}/uploads/{self.name}-{f}', 'wb') as destination:
+            for chunk in f.chunks():
+                destination.write(chunk)
 
