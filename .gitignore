@@ -1,0 +1,5 @@
+.vscode/
+database.db
+**.pyc
+node_modules/
+static/
