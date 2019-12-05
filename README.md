@@ -2,12 +2,12 @@
 
 ## Installation des dépendances
 
-`
+```bash
 sudo make install
-sudo apt install npm 
-npm i 
+sudo apt install npm
+npm i
 make update
-`
+```
 
 ## Déploiement de l'application
 
