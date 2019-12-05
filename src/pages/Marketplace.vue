@@ -6,6 +6,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import Filters from "@/components/Marketplace/Filters.vue";
 import Product from "@/components/Marketplace/Product.vue";
