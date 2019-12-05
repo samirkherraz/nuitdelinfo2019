@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     "compressor",
     'nuitdelinfo',
     'nuitdelinfo.apps.rest',
+    'nuitdelinfo.apps.filedrop',
+    'nuitdelinfo.apps.procedure',
 
 ]
 CSRF_USE_SESSIONS=True
