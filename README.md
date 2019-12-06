@@ -40,4 +40,4 @@ Le serveur se déploit en local sur le port 8000
 
 ##### Image docker
 
-Notre image docker est disponible à l'adresse suivante : 
+Notre image docker est disponible à l'adresse suivante : https://hub.docker.com/r/samirkherraz/nuitinfo2019
