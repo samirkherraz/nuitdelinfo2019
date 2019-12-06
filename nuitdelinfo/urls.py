@@ -9,5 +9,6 @@ urlpatterns = [
     path('api/procedure/', include('nuitdelinfo.apps.procedure.urls')),
     path('api/chat/', include('nuitdelinfo.apps.chat.urls')),
     path('api/plan/', include('nuitdelinfo.apps.plan.urls')),
+    path('api/profile/', include('nuitdelinfo.apps.profile.urls')),
     path('', include('nuitdelinfo.apps.webui.urls')),
 ]

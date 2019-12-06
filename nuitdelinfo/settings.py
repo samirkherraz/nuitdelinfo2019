@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'nuitdelinfo.apps.procedure',
     'nuitdelinfo.apps.chat',
     'nuitdelinfo.apps.plan',
+    'nuitdelinfo.apps.profile',
 
 ]
 CSRF_USE_SESSIONS=True
