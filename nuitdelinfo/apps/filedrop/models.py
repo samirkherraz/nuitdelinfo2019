@@ -33,3 +33,5 @@ class Document(models.Model):
             for chunk in f.chunks():
                 destination.write(chunk)
 
+    def delete_file(self):
+        os.unlink(self.path)

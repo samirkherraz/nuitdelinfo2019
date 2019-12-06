@@ -11,7 +11,15 @@ class DocumentView(Backend):
     def get(self):
         return model_to_dict(models.Document.objects.get(pk=self.kwargs.get("id")))
 
-
+    def delete(self):
+        doc = models.Document.objects.get(pk=self.kwargs.get("id"))
+        doc.dlete_file()
+        doc.delete()
+    
+    def put(self):
+        doc = models.Document.objects.get(pk=self.kwargs.get("id"))
+        doc.save_file(self.request.FILES['file'])
+       
 
 class CategoryView(Backend):
     
@@ -28,7 +36,7 @@ class DefaultView(Backend):
     def put(self):
         doc =  models.Document()
         doc.name = self.request.PUT['name']
-        #doc.category = models.Category.objects.get(self.request.PUT['category'])
+        doc.category = models.Category.objects.get(self.request.PUT['category'])
         doc.save_file(self.request.FILES['file'])
         doc.save()
     

@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from nuitdelinfo.apps.filedrop.models import Category as DocumentCategory
 class Category(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=64)
@@ -14,6 +15,8 @@ class Procedure(models.Model):
 class Document(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=255)
+    category = models.ForeignKey(DocumentCategory,on_delete=models.DO_NOTHING) 
+
 
 
 class ProcedureDocument(models.Model):

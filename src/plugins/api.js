@@ -6,7 +6,16 @@ export default {
   install(Vue) {
     
     class Orchestra {
-     
+      sendMsg(callback, data) {
+        axios
+          .put("/api/chat/",{message: data})
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            error(e);
+          });
+      }
 
       getProducts(callback) {
         axios

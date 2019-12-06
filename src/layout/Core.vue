@@ -21,6 +21,8 @@
       <page-content @click.native="toggleSidebar" />
       <page-footer />
     </div>
+    <chat></chat>
+
   </div>
 </template>
 <style lang="scss">
@@ -29,11 +31,14 @@
 import TopBar from "./TopBar.vue";
 import PageFooter from "./PageFooter.vue";
 import PageContent from "./PageContent.vue";
+import Chat from '@/components/Chat/Chat.vue';
+
 export default {
   components: {
     PageFooter,
     PageContent,
     TopBar,
+    Chat,
   },
   methods: {
     toggleSidebar() {

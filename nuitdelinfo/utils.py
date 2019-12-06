@@ -23,7 +23,7 @@ class Backend:
 
     def delete(self):
         pass
-
+  
     def load(self):
         pass
 
@@ -40,6 +40,7 @@ class Backend:
                 data = inst.delete()
             if request.method == 'PUT':
                 data = inst.put()
+        
         except ValueError as e: 
             return JsonResponse({
                 "status": 1,
