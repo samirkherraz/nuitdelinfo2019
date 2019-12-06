@@ -3,7 +3,7 @@
         <Filters></Filters>
 
         <div v-if="demarche !== NONE_VALUE" class="card-columns" style="margin-top: 1rem">
-            <Demarche v-bind:demarche="demarche"></Demarche>
+            <demarche v-bind:demarche="demarche"></demarche>
             <Input v-for="input in inputs" v-bind:input="input"/>
             <button @click="soumettre" type="button" class="btn btn-primary">Soumettre</button>
         </div>
@@ -28,14 +28,10 @@
         components: {Filters, Demarche},
         mounted() {
             this.demarche = store.getters.demarche;
+            this.inputs = store.getters.inputs;
         },
         computed: {
-            getInputs: function () {
-                if(demarche !== this.NONE_VALUE)
-                    inputs = this.$orchestra.getProcedureDocuments(function(data){
-                        this.inputs = data;
-                    }, this.demarche);
-            },
+           
             soumettre: function () {
                 for(inputId in inputs) {
 

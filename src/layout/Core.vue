@@ -24,7 +24,7 @@ import TopBar from "./TopBar.vue";
 import PageFooter from "./PageFooter.vue";
 import PageContent from "./PageContent.vue";
 import Chat from '@/components/Chat/Chat.vue';
-
+import store from '@/store/store';
 export default {
   components: {
     PageFooter,
@@ -38,6 +38,13 @@ export default {
         this.$sidebar.displaySidebar(false);
       }
     }
+  },
+  mounted(){
+
+    this.$orchestra.getDocuments((cats)=>{store.commit("documents",cats)})
+    this.$orchestra.getDocumentCategories((cats)=>{store.commit("categories",cats)})
+    this.$orchestra.getProcedures((cats)=>{store.commit("demarches",cats); console.log(cats)})
+
   }
 };
 </script>

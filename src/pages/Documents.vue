@@ -27,17 +27,7 @@
             this.documents = store.getters.documents;
             this.filter = store.getters.filter;
             console.log("filter : "+store.getters.filter);
-            this.$orchestra.getDocuments((data)=>{console.log(data)})
-            this.$orchestra.getDocumentCategories((data)=>{console.log(data)})
-            this.$orchestra.getDocumentCategory((data)=>{console.log(data)},0)
-            this.$orchestra.downloadDocument((data)=>{console.log(data)},0)
-            this.$orchestra.getProcedures((data)=>{console.log(data)})
-            this.$orchestra.getProcedureCategories((data)=>{console.log(data)})
-            this.$orchestra.getProcedure((data)=>{console.log(data)})
-            this.$orchestra.getProcedureCategory((data)=>{console.log(data)},0)
-            this.$orchestra.getProcedureConstraint((data)=>{console.log(data)},0)
-            this.$orchestra.getPlans((data)=>{console.log(data)})
-            
+           
         },
 
         computed: {

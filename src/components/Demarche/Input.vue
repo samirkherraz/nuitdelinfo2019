@@ -18,8 +18,8 @@
             uploadFile(event){
                 const file = event.targe.files[0];
                 this.$orchestra.putDocument(function () {
-                    alert("Yes on l'a envoyé, et on s'est arrêté là, désolé ...");
                 }, file);
+                alert("Yes on l'a envoyé, et on s'est arrêté là, désolé ...");
             }
         }
     }

@@ -11,7 +11,7 @@
 
                         <select @change="onCategorySelect($event)" class="custom-select">
                             <option :value="NONE_VALUE" selected>Choisissez une démarche ...</option>
-                            <option v-for="item in demarches" :value="item.id">item.name</option>
+                            <option v-for="item in demarches" :value="item.id">{{item.name}}</option>
                         </select>
                     </div>
                 </form>
@@ -24,8 +24,12 @@
     import Constants from "@/constants/constants";
 
     export default {
+        data(){
+            return{
+                demarches: []
+            }
+        },
         props : {
-            demarches : [],
             NONE_VALUE: Constants.NONE_VALUE
         },
         mounted() {
@@ -34,7 +38,9 @@
         },
         methods : {
             onCategorySelect(event) {
-                store.commit("setDemarche", event.target.value);
+                this.$orchestra.getProcedureDocuments(function(data){
+                        store.commit("inputs",data);
+                }, event.target.value);
             }
         }
     }

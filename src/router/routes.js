@@ -1,9 +1,6 @@
 import Core from "@/layout/Core.vue";
 // GeneralViews
 import NotFound from "@/pages/NotFound.vue";
-import Marketplace from "@/pages/Marketplace.vue";
-import Detail from "@/pages/Detail.vue";
-import Cart from "@/pages/Cart.vue";
 import Documents from "@/pages/Documents.vue";
 import Demarches from "@/pages/Demarches.vue";
 import Map from "@/pages/Map.vue";

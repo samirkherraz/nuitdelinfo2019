@@ -11,7 +11,7 @@
 
                         <select @change="onCategorySelect($event)" class="custom-select">
                             <option :value="NONE_VALUE" selected>Choisissez une catégorie ...</option>
-                            <option v-for="item in categories" :value="item.name">toto</option>
+                            <option v-for="item in categories" :value="item.name">{{item.name}}</option>
                         </select>
                     </div>
                 </form>

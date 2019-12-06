@@ -125,6 +125,16 @@ export default {
             console.log(e);
           });
       }
+      getProcedureDocuments(callback, id) {
+        axios
+          .get("/api/procedure/document/"+id+"/")
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
       getProcedureCategory(callback, id) {
         axios
           .get("/api/procedure/category/"+id+"/")
