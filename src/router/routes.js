@@ -11,10 +11,12 @@ import Map from "@/pages/Map.vue";
 const routes = [
   {
     path: "/",
+    redirect: "/documents",
+    name: "home",
     component: Core,
     children: [
       {
-        path: "Map",
+        path: "map",
         name: "Map",
         component: Map
       },
@@ -22,21 +24,6 @@ const routes = [
         path: "documents",
         name: "mes documents",
         component: Documents
-      },
-      {
-        path: "marketplace",
-        name: "marketplace",
-        component: Marketplace
-      },
-      {
-        path: "detail",
-        name: "detail",
-        component: Detail
-      },
-      {
-        path: "cart",
-        name: "cart",
-        component: Cart
       },
       { 
         path: "*",         

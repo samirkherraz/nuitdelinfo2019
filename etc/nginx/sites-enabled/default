@@ -1,0 +1,47 @@
+server {
+    index index.html index.php;
+    error_log  /var/log/nginx/error.log;
+    access_log /var/log/nginx/access.log;
+
+    root /usr/lib/qrticket/static/;
+    server_name _;
+
+    gzip on;             
+    gzip_disable "msie6";
+    gzip_comp_level 6;
+    gzip_buffers 16 8k;
+    gzip_http_version 1.1;
+    gzip_types  application/json   application/xml application/xml+rss text/plain application/javascript application/x-javascript text/javascript text/xml text/css;
+
+
+    location / {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_connect_timeout       300000;
+        proxy_send_timeout          300000;
+        proxy_read_timeout          300000;
+        send_timeout                300000;
+    }
+
+
+    location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
+      proxy_pass http://127.0.0.1:9000;
+      expires 1M;
+      access_log off;
+      add_header Cache-Control "public";
+      proxy_connect_timeout       300000;
+      proxy_send_timeout          300000;
+      proxy_read_timeout          300000;
+      send_timeout                300000;
+    }
+
+    location ~* \.(?:css|js|woff2)$ {
+      proxy_pass http://127.0.0.1:9000;
+      expires 1y;
+      access_log off;
+      add_header Cache-Control "public";
+      proxy_connect_timeout       300000;
+      proxy_send_timeout          300000;
+      proxy_read_timeout          300000;
+      send_timeout                300000;
+   }
+}

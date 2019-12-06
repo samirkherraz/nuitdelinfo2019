@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv sh
+
+
+
+cd /data
+
+
+if [ ! -f database/configured ]
+then
+    make update
+    touch database/configured
+fi
+
+echo "0" > /tmp/django

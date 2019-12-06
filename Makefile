@@ -18,9 +18,9 @@ ifdef APK_VERSION
 
 else ifdef APT_VERSION
 
- OS_INSTALL=sudo apt install -y 
+ OS_INSTALL=apt install -y 
 
- OS_UNINSTALL=sudo apt remove --auto-remove --purge -y 
+ OS_UNINSTALL=apt remove --auto-remove --purge -y 
 
  OS_RUN_DEPS=python3 \
  			python3-pip \

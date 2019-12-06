@@ -30,7 +30,8 @@ export default new Vuex.Store({
         hasFilter :     state => (state.filter !== Constants.NONE_VALUE)
     },
 
-    mounted() {
-        // TODO INIT PAR ORCHESTRA
+    mounted(){
+        this.$orchestra.getDocuments((docs)=>{state.documents = docs})
+        this.$orchestra.getDocumentCategories((cats)=>{state.categories = cats})
     }
 });

@@ -6,8 +6,8 @@
     <div class="sidebar-wrapper" id="style-3">
       <div class="logo">
         <a href="#" class="simple-text">
-            <div class="logo-img">
-                <img src="@/assets/img/vue-logo.png" alt="">
+            <div class="logo-img" style="color: black">
+                <i class="ti-star"></i>
             </div>
           {{title}}
         </a>
@@ -39,7 +39,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "NuveaPaaS"
+      default: "Nuit de l'info 2019"
     },
     backgroundColor: {
       type: String,

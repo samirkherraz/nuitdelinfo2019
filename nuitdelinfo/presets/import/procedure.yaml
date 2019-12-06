@@ -42,3 +42,45 @@
     procedure: 0
   pk: 1
   model: "procedure.Constraint"
+
+
+
+
+
+
+
+
+
+- fields:          
+    name: "Logement"
+  pk: 1
+  model: "procedure.Category"
+
+
+- fields:          
+    name: "Loc&Coloc"
+    link: "https://www.locetcoloc.fr/"
+    description: "LOC & coLOC, c'est près de 1.000 logements dédiés aux étudiants et jeunes actifs "
+    category: 1
+  pk: 1
+  model: "procedure.Procedure"
+
+
+- fields:          
+    name: "Certificat de scolarité"
+    category: 2
+  pk: 1
+  model: "procedure.Document"
+
+- fields:          
+    document: 0
+    procedure: 1
+  pk: 1
+  model: "procedure.ProcedureDocument"
+
+- fields:          
+    document: 1
+    procedure: 1
+  pk: 1
+  model: "procedure.ProcedureDocument"
+

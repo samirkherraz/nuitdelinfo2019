@@ -26,23 +26,9 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="ti-shopping-cart "></i>
-              <p>Panier</p>
-            </a>
-          </li>
-           <li class="nav-item">
-            <a href="#" class="nav-link">
               <i class="ti-user"></i>
               <p>
-                Notifications
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="ti-user"></i>
-              <p>
-                Profile
+                Connecté(Anonyme)
               </p>
             </a>
           </li>

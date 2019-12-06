@@ -15,9 +15,10 @@
         props : {
             document: Object
         },
-        mounted() {
+        mounted(){
             console.log("Document :");
             console.log(document)
+            
         }
     }
 </script>
