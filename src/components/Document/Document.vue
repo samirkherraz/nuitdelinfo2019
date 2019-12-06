@@ -14,10 +14,6 @@
     export default {
         props : {
             document: Object
-        },
-        mounted() {
-            console.log("Document :");
-            console.log(document)
         }
     }
 </script>
