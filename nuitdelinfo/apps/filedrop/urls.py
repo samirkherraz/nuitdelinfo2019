@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('category', views.CategoryView()),
-    path('', views.DefaultView()),
+    path('binary/<str:id>', views.DocumentDownloaderView),
     path('<str:id>', views.DocumentView()),
+    path('', views.DefaultView()),
 ]

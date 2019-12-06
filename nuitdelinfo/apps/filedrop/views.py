@@ -1,6 +1,11 @@
 from . import models
 from nuitdelinfo.utils import Backend
 from django.forms.models import model_to_dict
+
+def DocumentDownloaderView(request, id):
+    return models.Document.objects.get(pk=id).get_file()
+
+
 class DocumentView(Backend):
     
     def get(self):

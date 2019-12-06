@@ -18,7 +18,6 @@ class Document(models.Model):
 
 class ProcedureDocument(models.Model):
     id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=255)
     document = models.ForeignKey(Document, on_delete=models.DO_NOTHING) 
     procedure = models.ForeignKey(Procedure,on_delete=models.DO_NOTHING) 
 
@@ -35,6 +34,7 @@ class Constraint(models.Model):
     id = models.IntegerField(primary_key=True)
     field = models.CharField(max_length=64)
     type = models.CharField(max_length=64)
+    regex = models.CharField(max_length=64)
     operator = models.CharField(max_length=32)
     controle = models.CharField(max_length=64, blank=True, null=True, default=None)
     procedure = models.ForeignKey(Procedure,on_delete=models.DO_NOTHING) 

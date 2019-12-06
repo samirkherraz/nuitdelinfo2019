@@ -1,7 +1,11 @@
 
 from django.http import JsonResponse
 from django.http import QueryDict
-
+def to_list(qs):
+    """
+    this will return python list<dict>
+    """
+    return [dict(q) for q in qs]
 class Backend:
     __DEPS__ = []
 
