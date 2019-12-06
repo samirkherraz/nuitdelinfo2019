@@ -1,0 +1,33 @@
+- fields:
+    name: "Pièce d'identité"
+  pk: 0
+  model: "filedrop.Category"
+- fields:
+    name: "Photo"
+  pk: 1
+  model: "filedrop.Category"
+- fields:
+    name: "Certificat de scolarité"
+  pk: 2
+  model: "filedrop.Category"
+- fields:
+    name: "Résponsabilité Civil"
+  pk: 3
+  model: "filedrop.Category"
+- fields:
+    name: "Bultin de salaire"
+  pk: 4
+  model: "filedrop.Category"
+- fields:
+    name: "RIB"
+  pk: 5
+  model: "filedrop.Category"
+- fields:          
+    name: "JAPD"
+  pk: 6
+  model: "filedrop.Category"
+
+- fields:          
+    name: "Carte Vitale"
+  pk: 7
+  model: "filedrop.Category"

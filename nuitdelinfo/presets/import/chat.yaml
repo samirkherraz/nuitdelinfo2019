@@ -1,0 +1,31 @@
+- fields:          
+    input: ".*comment.*contacter.*caf.*"
+    output: "Vous pouvez contacter la caf en passant par votre espace locataire à l'adresse : ...."
+  model: "chat.Response"
+
+- fields:          
+    input: ".*comment.*contacter.*smerra.*"
+    output: "Vous pouvez contacter la smerra  : ...."
+  model: "chat.Response"
+     
+- fields:          
+    input: ".*(bonjour|salut|cc|slt|bnjr|yo).*"
+    output: "Bonjour ! Ravi d'être la pour vous aider"
+  model: "chat.Response"
+     
+- fields:          
+    input: ".*besoin.*aide.*"
+    output: "Tres bien, Comment puis-je vous aider ?"
+  model: "chat.Response"
+     
+- fields:          
+    input: "c'est.*quoi (.*)\\?+"
+    output: "hmm ... Je suis assez jeun ! Je ne sais pas quoi dire à propos de \\1"
+  model: "chat.Response"
+
+     
+- fields:          
+    input: ".*une.*blague.*"
+    output: "Pourquoi les castors ont la queue plate ?\\nPour se faire sucer par les canards"
+  model: "chat.Response"
+     

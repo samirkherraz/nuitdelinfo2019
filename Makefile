@@ -34,7 +34,8 @@ PIP_INSTALL=pip3 install --upgrade
 
 PYTHON=python3
 
-PIP_RUN_DEPS=django \
+PIP_RUN_DEPS=django==2.2.1 \
+			djangorestframework \
 			django-bootstrap-customizer \
 			xhtml2pdf \
 			django-crispy-forms \
@@ -108,6 +109,7 @@ update: clean
 		@$(PYTHON) manage.py makemigrations --empty nuitdelinfo
 		@$(PYTHON) manage.py makemigrations 
 		@$(PYTHON) manage.py migrate  --run-syncdb 
+		@$(PYTHON) manage.py loaddata nuitdelinfo/presets/import/*.yaml 
 		@echo "from django.contrib.auth import get_user_model;User = get_user_model();User.objects.create_superuser('adminsu', 'support@dotriver.eu', 'Shinu3G!');" | $(PYTHON) manage.py shell 
 
 

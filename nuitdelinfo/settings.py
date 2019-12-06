@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "compressor",
     'nuitdelinfo',
-    'nuitdelinfo.apps.rest',
+    'nuitdelinfo.apps.filedrop',
+    'nuitdelinfo.apps.procedure',
+    'nuitdelinfo.apps.chat',
+    'nuitdelinfo.apps.plan',
+    'nuitdelinfo.apps.profile',
 
 ]
 CSRF_USE_SESSIONS=True
@@ -54,6 +58,7 @@ STATICFILES_FINDERS = (
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'nuitdelinfo.middleware.AppManager',
     'django.middleware.common.CommonMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

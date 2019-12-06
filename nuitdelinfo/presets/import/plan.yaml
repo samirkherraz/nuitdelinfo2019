@@ -1,0 +1,11 @@
+- fields:          
+    name: "Evenement"
+  pk: 0
+  model: "plan.Category"
+
+
+- fields:          
+    category: 0
+    x: "0"
+    y: "0"
+  model: "plan.Location"

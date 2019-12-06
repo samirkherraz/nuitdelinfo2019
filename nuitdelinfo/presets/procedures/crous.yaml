@@ -1,0 +1,45 @@
+offers:
+- title: bourse
+
+  data:
+    - type: mandatory
+      list:
+      - revenu_brut_global_avis_fiscal_annee_precedente
+
+      - type: conditional
+        if: etranger
+        name: attestion_honneur_revenus_parents
+
+      - type: conditional
+        if: parents_divorces
+        list:
+          - jugement_divorce
+          - type: conditional
+            if-not: pension_alimentaire
+            name: avis_imposition_autre_parent
+
+      - justificatif_scolarite
+
+      - type: conditional
+        if: nb_freres_soeurs_etudes_superieures > 0
+        multiple: justificatif_scolarite
+
+      - rib
+
+- title: simulation
+
+  data:
+    - type: mandatory
+      list:
+      - revenu_brut_global_avis_fiscal_annee_precedente
+      - nb_freres_et_soeurs
+      - nb_freres_soeurs_etudes_superieures
+      - distance_domicile_etablissement
+
+  output:
+    - name: echelon
+      type: text
+    - name: montant_annuel
+      type: number
+
+  #link: http://www.crous-lyon.fr/bourses/constituer-son-dossier/pieces-justificatives/

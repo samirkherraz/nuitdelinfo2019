@@ -1,0 +1,44 @@
+- fields:          
+    name: "Transport"
+  pk: 0
+  model: "procedure.Category"
+
+
+- fields:          
+    name: "Abonnement TCL"
+    link: "https://www.tcl.fr/"
+    description: "Pour vous déplacer dans Lyon et sa région"
+    category: 0
+  pk: 0
+  model: "procedure.Procedure"
+
+- fields:          
+    name: "Pièce d'identité"
+    category: 0
+  pk: 0
+  model: "procedure.Document"
+
+- fields:          
+    document: 0
+    procedure: 0
+  pk: 0
+  model: "procedure.ProcedureDocument"
+
+
+- fields:          
+    field: "Age"
+    type: "number"
+    operator: le
+    controle: 25
+    procedure: 0
+  pk: 0
+  model: "procedure.Constraint"
+
+- fields:          
+    field: "Age"
+    type: "number"
+    operator: ge
+    controle: 18
+    procedure: 0
+  pk: 1
+  model: "procedure.Constraint"

@@ -1,0 +1,52 @@
+offers:
+- title: 18/25 ans
+
+  constraints:
+    - type: age
+      ge: 18
+      le: 25
+
+  billing:
+    - type: monthly
+      price: 32
+      unit: euros
+    - type: yearly
+      price: 320
+      unit: euros
+
+  infos:
+    - type: mandatory
+      list:
+      - civilite
+      - nom
+      - prenom
+      - date_de_naissance
+      - adresse_email
+      - adresse
+      - code_postal
+      - commune
+      - mdp
+      - num_carte_bancaire
+      - date_exp
+      - code_verif
+
+    - type: optional
+      list:
+      - telephone_fixe
+      - telephone_mobile
+
+  options:
+  - type: newsletter
+    content: infos_commerciales
+
+  docs:
+  - id
+  - id_picture
+
+  link: https://e-tecely.tcl.fr/tcl/creationDossierAnonymeVPC.do?montantTotal=0&lienPanier=panierAnonyme.do&isDemarcheRechargement=false&isDemarcheSituation=false&isModeDeconnecte=true&nbrElemPanier=0&etapeGpList=ETAPE_PRODUITS&etapeGpList=ETAPE_PANIER&etapeGpList=ETAPE_LIVRAISON&etapeGpList=ETAPE_RECAPITULATIF
+
+  charters:
+    - name: Conditions générales de ventes
+      link: https://e-tecely.tcl.fr/tcl/cms.do?pcms=/fr/informations/conditions-generales-de-vente_12.html
+    - name: Respect de la vie privée CNIL
+      link: https://e-tecely.tcl.fr/tcl/cms.do?pcms=/fr/informations/mentions-legales_15.html
