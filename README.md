@@ -1,6 +1,5 @@
 # nuitdelinfo2019
-### Sprints ici 
-https://box.equantum.fr/s/epjAQoqA4xqg3bB
+
 ### Installation des dépendances
 
 ```bash
@@ -16,7 +15,5 @@ make update
 
 `make run`
 
-##### Lancer le serveur Node.js
-
-`npm run serve`
+Le serveur se déploit en local sur le port 8000
 
