@@ -50,11 +50,15 @@ export default {
     return { categories: [] };
   },
   mounted() {
-    this.categories = store.getters.categories;
+    this.$orchestra.getCategories(data => {
+      this.categories = data;
+    });
   },
   methods: {
     onCategorySelect(event) {
-      store.commit("setFilter", event.target.value);
+      this.$orchestra.getCategory(data => {
+        this.$parent.products = data
+      },event.target.value );
     }
   }
 };

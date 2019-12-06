@@ -13,7 +13,7 @@ const routes = [
     children: [
       {
         path: "documents",
-        name: "documents",
+        name: "mes documents",
         component: Documents
       },
       {

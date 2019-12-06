@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" style="bottom:0;position:absolute;width:100%;">
     <div class="container-fluid d-flex flex-wrap justify-content-between">
       <nav>
         <ul>
