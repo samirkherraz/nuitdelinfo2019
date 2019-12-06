@@ -35,7 +35,6 @@ PIP_INSTALL=pip3 install --upgrade
 PYTHON=python3
 
 PIP_RUN_DEPS=django==2.2.1 \
-			djangorestframework \
 			django-bootstrap-customizer \
 			xhtml2pdf \
 			django-crispy-forms \

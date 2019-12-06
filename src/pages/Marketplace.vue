@@ -1,12 +1,14 @@
 <template>
   <div class="container-fluid">
-    <filters />
+<!--    <filters />-->
     <div class="card-columns">
       <product v-for="item in products" v-bind:key="item.product_no" :item="item" />
     </div>
   </div>
 </template>
+
 <script>
+
 import Filters from "@/components/Marketplace/Filters.vue";
 import Product from "@/components/Marketplace/Product.vue";
 
