@@ -1,0 +1,13 @@
+- fields:          
+    sex: "Mr."
+    first_name: "Jonathan"
+    last_name: "Cabezas"
+    birthdate: "02/02/1997"
+    email: "jonathan@jcabezas.fr"
+    address: "Nautibus TD13"
+    postal_code: "69100"
+    city: "Villeurbanne"
+    primary_phone: "0606060606"
+    secondary_phone: "0606060606"
+  pk: 0
+  model: "profile.Profile"

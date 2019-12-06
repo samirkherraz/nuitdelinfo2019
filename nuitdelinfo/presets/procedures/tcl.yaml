@@ -14,7 +14,7 @@ offers:
       price: 320
       unit: euros
 
-  data:
+  infos:
     - type: mandatory
       list:
       - civilite
@@ -25,8 +25,6 @@ offers:
       - adresse
       - code_postal
       - commune
-      - id
-      - id_picture
       - mdp
       - num_carte_bancaire
       - date_exp
@@ -41,6 +39,10 @@ offers:
   - type: newsletter
     content: infos_commerciales
 
+  docs:
+  - id
+  - id_picture
+
   link: https://e-tecely.tcl.fr/tcl/creationDossierAnonymeVPC.do?montantTotal=0&lienPanier=panierAnonyme.do&isDemarcheRechargement=false&isDemarcheSituation=false&isModeDeconnecte=true&nbrElemPanier=0&etapeGpList=ETAPE_PRODUITS&etapeGpList=ETAPE_PANIER&etapeGpList=ETAPE_LIVRAISON&etapeGpList=ETAPE_RECAPITULATIF
 
   charters:
@@ -48,4 +50,3 @@ offers:
       link: https://e-tecely.tcl.fr/tcl/cms.do?pcms=/fr/informations/conditions-generales-de-vente_12.html
     - name: Respect de la vie privée CNIL
       link: https://e-tecely.tcl.fr/tcl/cms.do?pcms=/fr/informations/mentions-legales_15.html
-    # penser au captcha
