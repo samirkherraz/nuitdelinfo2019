@@ -16,9 +16,9 @@ export default {
     return { products: [] };
   },
   mounted() {
-    this.$orchestra.getProducts(data => {
+    this.$orchestra.downloadDocument(data => {
       this.products = data;
-    });
+    },0);
   }
 };
 </script>

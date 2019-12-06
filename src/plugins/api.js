@@ -13,40 +13,163 @@ export default {
             callback(e.data.content);
           })
           .catch(e => {
-            error(e);
+            console.log(e);
+          });
+      }
+      // Documents
+
+      getDocuments(callback) {
+        axios
+          .get("/api/filedrop/")
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
           });
       }
 
-      getProducts(callback) {
+      getDocumentCategories(callback) {
         axios
-          .get("http://127.0.0.1:8000/api/product/all")
+          .get("/api/filedrop/category")
           .then(e => {
             callback(e.data.content);
           })
           .catch(e => {
-            error(e);
+            console.log(e);
           });
       }
-      getCategories(callback) {
+
+      getDocumentCategory(callback, id) {
         axios
-          .get("http://127.0.0.1:8000/api/product/category")
+          .get("/api/filedrop/category/"+id+"/")
           .then(e => {
             callback(e.data.content);
           })
           .catch(e => {
-            error(e);
+            console.log(e);
           });
       }
-      getCategory(callback, data) {
+
+      downloadDocument(callback, id) {
         axios
-          .post("http://127.0.0.1:8000/api/product/category",data)
+          .get("/api/filedrop/binary/"+id+"/")
           .then(e => {
             callback(e.data.content);
           })
           .catch(e => {
-            error(e);
+            console.log(e);
           });
       }
+
+      deleteDocument(callback, id) {
+        axios
+          .delete("/api/filedrop/"+id+"/")
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+
+      updateDocument(callback, id, data) {
+        axios
+          .put("/api/filedrop/"+id+"/", data)
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+
+      createDocument(callback, data) {
+        axios
+          .put("/api/filedrop/",data)
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+      // Procedures
+      getProcedures(callback) {
+        axios
+          .get("/api/procedure/")
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+      getProcedureCategories(callback) {
+        axios
+          .get("/api/procedure/category")
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+      getProcedure(callback, id) {
+        axios
+          .get("/api/procedure/"+id+"/")
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+      getProcedureCategory(callback, id) {
+        axios
+          .get("/api/procedure/category/"+id+"/")
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+      
+      getProcedureConstraint(callback, id) {
+        axios
+          .get("/api/procedure/constraint/"+id+"/")
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+
+      checkProcedureConstraint(callback, id, data) {
+        axios
+          .post("/api/procedure/constraint/"+id+"/", data)
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+      // Plan
+      getPlans(callback) {
+        axios
+          .post("/api/plan/")
+          .then(e => {
+            callback(e.data.content);
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      }
+      
+
     }
     let orchestra = new Orchestra();
     Vue.orchestra = orchestra;
