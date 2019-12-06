@@ -25,12 +25,25 @@ export default {
     sendMsg(event) {
       let value = event.target.value;
       event.target.value = "";
+
       this.messages.push({ content: value, align: "right" });
 
-      this.$orchestra.sendMsg(data => {
-        this.messages.push({ content: data, align: "left" });
-        setTimeout(this.scroll, 100);
-      }, value);
+      if (value.match(/rickroll/) != null) {
+        var rickroll = document.createElement('iframe');
+        rickroll.style.width = "640px";
+        rickroll.style.height = "480px";
+        rickroll.setAttribute("allow", "autoplay");
+        rickroll.setAttribute("src", "https://www.youtube.com/embed/DLzxrzFCyOs?autoplay=1");
+
+        var content = document.getElementsByClassName("content")[0]
+        content.innerHTML = "";
+        content.appendChild(rickroll);
+      } else {
+        this.$orchestra.sendMsg(data => {
+          this.messages.push({ content: data, align: "left" });
+          setTimeout(this.scroll, 100);
+        }, value);
+      }
     },
     scroll() {
       var container = this.$el.querySelector(".chatbox .messages");
