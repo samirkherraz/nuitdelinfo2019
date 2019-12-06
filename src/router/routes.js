@@ -5,7 +5,7 @@ import Marketplace from "@/pages/Marketplace.vue";
 import Detail from "@/pages/Detail.vue";
 import Cart from "@/pages/Cart.vue";
 import Documents from "@/pages/Documents.vue";
-import Document from "@/components/Document/Document.vue";
+import Demarches from "@/pages/Demarches.vue";
 import Map from "@/pages/Map.vue";
 
 const routes = [
@@ -16,8 +16,13 @@ const routes = [
     component: Core,
     children: [
       {
+        path: "demarches",
+        name: "demarches",
+        component: Demarches
+      },
+      {
         path: "map",
-        name: "Map",
+        name: "map",
         component: Map
       },
       {

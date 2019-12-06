@@ -6,12 +6,12 @@
                     <div class="input-group  mr-2">
 
                         <div class="input-group-prepend">
-                            <label class="input-group-text">Categories</label>
+                            <label class="input-group-text">Démarches</label>
                         </div>
 
                         <select @change="onCategorySelect($event)" class="custom-select">
-                            <option :value="NONE_VALUE" selected>Choisissez une catégorie ...</option>
-                            <option v-for="item in categories" :value="item.name">toto</option>
+                            <option :value="NONE_VALUE" selected>Choisissez une démarche ...</option>
+                            <option v-for="item in demarches" :value="item.id">item.name</option>
                         </select>
                     </div>
                 </form>
@@ -24,17 +24,18 @@
     import Constants from "@/constants/constants";
 
     export default {
-        data() {
-            return {categories: [], NONE_VALUE: Constants.NONE_VALUE};
+        props : {
+            demarches : [],
+            NONE_VALUE: Constants.NONE_VALUE
         },
         mounted() {
-            store.commit("resetFilter");
-            this.categories = store.getters.categories;
+            store.commit("resetDemarche");
+            this.demarches = store.getters.demarches
         },
-        methods: {
+        methods : {
             onCategorySelect(event) {
-                store.commit("setFilter", event.target.value);
+                store.commit("setDemarche", event.target.value);
             }
         }
-    };
+    }
 </script>

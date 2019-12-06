@@ -8,8 +8,10 @@ Vue.use(Vuex);
 let state = { // données membres
     person : {},
     documents : [],
+    categories: [],
+
     filter: Constants.NONE_VALUE,
-    categories: []
+    demarche: Constants.NONE_VALUE
 };
 
 export default new Vuex.Store({
@@ -19,7 +21,10 @@ export default new Vuex.Store({
         addDocument :   (state, document) => state.documents.push(document),
 
         resetFilter :   state             => state.filter = Constants.NONE_VALUE,
-        setFilter :     (state, filter)   => state.filter = filter === ""? Constants.NONE_VALUE : filter
+        setFilter :     (state, filter)   => state.filter = filter === ""? Constants.NONE_VALUE : filter,
+
+        resetDemarche:  state             => state.demarche = Constants.NONE_VALUE,
+        setDemarche:    (state, demarche) => state.demarche = demarche === ""? Constants.NONE_VALUE : demarche
     },
 
     getters : {
@@ -27,7 +32,10 @@ export default new Vuex.Store({
         categories:     state => state.categories,
 
         filter :        state => state.filter,
-        hasFilter :     state => (state.filter !== Constants.NONE_VALUE)
+        hasFilter :     state => (state.filter !== Constants.NONE_VALUE),
+
+        demarche :     state => state.demarche,
+        hasDemarche :   state => (state.demarche !== Constants.NONE_VALUE),
     },
 
     mounted(){

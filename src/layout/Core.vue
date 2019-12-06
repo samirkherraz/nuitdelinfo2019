@@ -4,6 +4,8 @@
       <template slot="links">
         <sidebar-link to="/documents" name="Mes documents" icon=""/> <!-- TODO Add logo-->
         <sidebar-link to="/map" name="Map" icon=""/> <!-- TODO Add logo-->
+        <sidebar-link to="/demarches" name="Mes demarches" icon="ti-shopping-cart "/>
+
       </template>
     </side-bar>
     <div class="main-panel">

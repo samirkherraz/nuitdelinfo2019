@@ -3,7 +3,7 @@
         <Filters></Filters>
 
         <div class="card-columns" style="margin-top: 1rem">
-            <Document v-on:click="" v-if="doc.type === filter || filter == NONE_VALUE" v-for="doc in filteredDocumentsOrCategories" v-bind:document="doc" :key="doc.id"></Document>
+            <Document v-if="doc.type === filter || filter == NONE_VALUE" v-for="doc in filteredDocumentsOrCategories" v-bind:document="doc" :key="doc.id"></Document>
         </div>
     </div>
 </template>
